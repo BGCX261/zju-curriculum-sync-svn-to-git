@@ -1,0 +1,35 @@
+﻿{
+    //"manifest_version": 2,
+    "content_security_policy": "script-src 'self' 'unsafe-inline' https://*.google.com ;",// default-src 'self' 'unsafe-inline' http://grsinfo.zju.edu.cn/ https://www.googleapis.com/",
+    "name": "浙大课程表同步",
+    "version": "0.5.0",
+    "description": "此插件用于将浙大研究生的课表同步到Google日历",
+    "icons": {
+        "128":"icon.png",
+        "48":"icon.png"
+    },
+    "browser_action": {
+        "default_title": "课程表同步助手",
+        "default_icon": "icon.png",
+        "default_popup":"index.html"
+    },
+    "background": {
+        "scripts": [
+        "chrome_ex_oauthsimple.js",
+        "chrome_ex_oauth.js",
+        "background.min.js"
+        ]
+    },
+    "options_page": "options.html",
+    "permissions": [
+    "http://grsinfo.zju.edu.cn/cultivate/selectles/selectbefore/xkhxkbcx.jsp",
+    "http://g.zju.edu.cn/cultivate/selectles/selectbefore/xkhxkbcx.jsp",
+    "https://www.googleapis.com/auth/calendar",
+    "https://www.google.com/accounts/OAuthGetRequestToken",
+    "https://www.google.com/accounts/OAuthAuthorizeToken",
+    "https://www.google.com/accounts/OAuthGetAccessToken",
+    "tabs"
+    ],
+    "homepage_url":"http://www.zjustu.org/"
+//"update_url":"http://nav.8866.org/daohang/plugin/update.xml"
+}

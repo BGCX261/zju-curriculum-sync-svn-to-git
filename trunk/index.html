@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link type="text/css" href="css/smoothness/jquery-ui-1.8.23.custom.css" rel="stylesheet" />
+        <script type="text/javascript" src="./js/jquery-1.8.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.8.23.custom.min.js"></script>
+        <script type="text/javascript" src="./js/main.js"></script>
+        <script type="text/javascript" src="chrome_ex_oauthsimple.js"></script>
+        <script type="text/javascript" src="chrome_ex_oauth.js"></script>
+        <script type="text/javascript" src="background.min.js"></script>
+        <script type="text/javascript" src="./js/graduate.parser.min.js"></script>
+        <style type="text/css">
+            body {
+                width:200px;
+                height:auto;
+                marigin:5px;
+				font-family: '宋体',Arial,"sans-serif";
+				font-size: 14px;
+            }
+			input[type=text],input[type=password] {
+				width: 140px;
+				height: auto;
+				padding: 2px 4px;
+				border-radius: 4px;
+				font-family: Arial;
+				font-weight: bold;
+				font-size: 1.5em;
+				border-width: 1px;
+				border-color: lightblue;
+			}
+            .mask {
+                background: url("img/spinner.gif") 50% 50% no-repeat;
+                background-color: #000;
+                opacity:0.6;
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                z-index: 99999999;
+            }
+        </style>
+    </head>
+
+    <body>
+        <a href="#" id="auth">登录</a>Google
+        <ul id="events"></ul>
+        <form style="display: none" id="login" action="#" method="POST">
+            <label for="user_id">学号：</label><input tabindex="1" type="text" name="user_id" maxlength="20" /><br />
+            <label for="password">密码：</label><input tabindex="2" type="password" name="password" maxlength="20" />
+            <input id="loginBtn" type="submit" value="登录" />
+        </form>
+        <div id="success" class="ui-helper-hidden">
+            <div class="ui-widget">
+                <div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;">
+                    <p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+                        <strong>已经成功导入！</strong><a target="_blank" href="https://www.google.com/calendar/render">去Google日历看看</a></p>
+                </div>
+            </div>
+        </div>
+        <div id="fail" class="ui-helper-hidden">
+            <div class="ui-widget">
+                <div class="ui-state-error ui-corner-all" style="padding: 0 .7em;">
+                    <p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
+                        <strong>出错了……</strong><span id="msg"></span></p>
+                </div>
+            </div>
+        </div>
+        <div id="builder" style="display: none"></div>
+    </body>
+</html>

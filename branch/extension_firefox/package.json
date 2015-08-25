@@ -1,0 +1,11 @@
+{
+    "name": "zju-course-site", 
+    "license": "MPL 2.0", 
+    "author": "rickytan", 
+    "version": "0.5", 
+    "fullName": "zju course web site plugin", 
+    "id": "jid1-1LpRQpi8Aexr6A", 
+    "icon": "data/icon.png",
+    "homepage": "http://www.zjustu.org",
+    "description": "zju course web site compacity plugin for Firefox"
+}
